@@ -11,7 +11,7 @@
   <meta property="og:description" content="Artfactum is a website for art lovers and artists to interact, enhance reputations, and find new opportunities.">
   <meta property="og:image" content="#">
 
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico?v=1" type="image/x-icon">
 
     <title>Artfactum | We Empower Art Lovers</title>
 
@@ -21,7 +21,7 @@
     <!-- Custom styles for this template -->
     <link href="./assets/css/main.css" rel="stylesheet">
 
-    <script src="./assets/js/ie-emulation-modes-warning.js"></script>
+   
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -37,7 +37,6 @@
         <video id="bgvid" autoplay loop>
           <source src="./assets/video/bgvid.mp4" type="video/mp4">
           <source src="./assets/video/bgvid.webm" type="video/webm">
-          <img src="./assets/img/something.jpg" title="Your browser does not support the <video> tag" />
         </video>
 
       <div class="site-wrapper-inner">
@@ -54,9 +53,10 @@
             <h1 class="cover-heading">WE EMPOWER ART LOVERS</h1>
             <p class="lead">Imagine a free community where art lovers and artists like you can interact, enhance your reputation, and find new opportunities.</p>
               <section class="signup">
-                 <form role="form">
+                 <form id="email-signup" role="form" data-url="https://assembly.com/api/products/artfactum/potential_users">
                   <div class="form-group">
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <label class="sr-only" for="email">Email address</label>
+                    <input class="email form-control" type="email" name="email" placeholder="Enter email">
                     <p></p>
                     <button type="submit" class="btn btn-default"><em>I'm an Art Lover</em><br><small>keep me posted</small></button>
                   </div>
@@ -81,7 +81,7 @@
             
             </div>
               <div class="left">
-              <p>&copy; 2014  Built by the community at <a href="http://assembly.com" target="_blank">Assembly</a></p>
+              <p>&copy; 2014  Built by the community at <a href="http://assembly.com/artfactum" target="_blank">Assembly</a></p>
               </div>
              
           </div>
@@ -96,6 +96,32 @@
 $("#bgvid").bind('ended', function(){
      this.play();
 });
+
+  $(document).ready(function() {
+    ('#email-signup').submit(function(e) {
+      e.preventDefault();
+
+      subscribe($(this));
+    });
+
+    function subscribe($form) {
+      var path = $form.data('url');
+      var data = {
+        email: $form.find('input[name="email"]').val()
+      };
+
+      $form.find('input[name="email"]').val('');
+
+      $.post(path, data)
+        .done(function(data) {
+          $form.find('input[name="email"]').val('');
+          alert('Subscribed!')
+        })
+        .fail(function(err) {
+          alert('Failed :(')
+        });
+    }
+  })
 </script>
 
     <!-- Bootstrap core JavaScript
@@ -106,6 +132,7 @@ $("#bgvid").bind('ended', function(){
     <script src="./assets/js/docs.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./assets/js/ie10-viewport-bug-workaround.js"></script>
+     <script src="./assets/js/ie-emulation-modes-warning.js"></script>
 
 <script>
 
@@ -124,7 +151,7 @@ console.log("***");
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-XXXXXXX-XX', 'auto');
+ga('create', 'UA-54998154-1', 'auto');
 ga('send', 'pageview');
 
 </script>
