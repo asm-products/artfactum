@@ -212,12 +212,20 @@ float: left;
   display: inline;
   margin-bottom: -20px;
 }
+
+#widget {
+  left: 20%;
+  top: 0;
+  margin-bottom: 20px;
+  z-index: 100;
+}
 video#bgvid {
     display: none;
   }
  .cover-heading {
   font-size: 3em;
   color: black;
+  margin-top: -20px;
  }
  .lead {
   font-size: 1.2em;
