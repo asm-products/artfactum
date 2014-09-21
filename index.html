@@ -113,20 +113,10 @@ ga('send', 'pageview');
     </div>
 
 
-<!-- all the scripts -->
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
-
-<script>
-$("#bgvid").bind('ended', function(){
-     this.play();
-});
-</script>
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
     <script src="./assets/js/jquery.localizationTool.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/docs.min.js"></script>
@@ -134,7 +124,7 @@ $("#bgvid").bind('ended', function(){
     <script src="./assets/js/ie10-viewport-bug-workaround.js"></script>
      <script src="./assets/js/ie-emulation-modes-warning.js"></script>
 
-<script>
+     <script>
 
 console.log("***");
 console.log("***");
@@ -145,6 +135,43 @@ console.log("***");
 console.log("***");
 
 </script>
+
+<script>
+$("#bgvid").bind('ended', function(){
+     this.play();
+});
+
+$(document).ready(function() {
+  $('#email-signup').submit(function(e) {
+    e.preventDefault();
+
+    subscribe($(this));
+    });
+
+  function subscribe($form) {
+          var path = $form.data('url');
+          var data = {
+            email: $form.find('input[name="email"]').val()
+          };
+
+        $form.find('input[name="email"]').val('');
+        $.post(path, data)
+            .done(function(data) {
+              $form.find('input[name="email"]').val('');
+              alert('Subscribed!')
+            })
+            .fail(function(err) {
+              alert('Failed :(')
+            });
+        }
+      });
+
+
+</script>
+
+
+
+
 
 <script>
             $('#widget').localizationTool({
