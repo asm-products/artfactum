@@ -21,7 +21,7 @@
     <!-- Custom styles for this template -->
     <link href="./assets/css/main.css" rel="stylesheet">
 
-   
+
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -72,18 +72,18 @@
                 <a href="#" target="https://www.facebook.com/artfact.co"><img src="./assets/img/facebook42.png"></a>
               <a href="#" target="https://twitter.com/Artfactum_"><img src="./assets/img/twitter42.png"></a>
               <a href="#" target="https://plus.google.com/116891161685664548051/posts"><img src="./assets/img/google-plus42.png"></a>
-            
+
             </div>
             <div class="right mobile-only">
                 <a href="#" target="https://www.facebook.com/artfact.co"><img src="./assets/img/facebook-dark42.png"></a>
               <a href="https://twitter.com/Artfactum_" target="_blank"><img src="./assets/img/twitter-dark42.png"></a>
               <a href="https://plus.google.com/116891161685664548051/posts"><img src="./assets/img/google-plus-dark42.png" target="_blank"></a>
-            
+
             </div>
               <div class="left">
               <p>&copy; 2014  Built by the community at <a href="http://assembly.com/artfactum" target="_blank">Assembly</a></p>
               </div>
-             
+
           </div>
 
         </div>
@@ -91,38 +91,6 @@
       </div>
 
     </div>
-
-<script>
-$("#bgvid").bind('ended', function(){
-     this.play();
-});
-
-  $(document).ready(function() {
-    ('#email-signup').submit(function(e) {
-      e.preventDefault();
-
-      subscribe($(this));
-    });
-
-    function subscribe($form) {
-      var path = $form.data('url');
-      var data = {
-        email: $form.find('input[name="email"]').val()
-      };
-
-      $form.find('input[name="email"]').val('');
-
-      $.post(path, data)
-        .done(function(data) {
-          $form.find('input[name="email"]').val('');
-          alert('Subscribed!')
-        })
-        .fail(function(err) {
-          alert('Failed :(')
-        });
-    }
-  })
-</script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -132,28 +100,62 @@ $("#bgvid").bind('ended', function(){
     <script src="./assets/js/docs.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./assets/js/ie10-viewport-bug-workaround.js"></script>
-     <script src="./assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="./assets/js/ie-emulation-modes-warning.js"></script>
 
-<script>
+    <script>
 
-console.log("***");
-console.log("***");
-console.log("***");
-console.log("Want to get involved in this project? Head over to https://assembly.com/artfactum");
-console.log("***");
-console.log("***");
-console.log("***");
+      console.log("***");
+      console.log("***");
+      console.log("***");
+      console.log("Want to get involved in this project? Head over to https://assembly.com/artfactum");
+      console.log("***");
+      console.log("***");
+      console.log("***");
 
-</script>
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    </script>
 
-ga('create', 'UA-54998154-1', 'auto');
-ga('send', 'pageview');
+    <script>
+      $("#bgvid").bind('ended', function(){
+           this.play();
+      });
 
-</script>
+      $(document).ready(function() {
+
+        $('#email-signup').submit(function(e) {
+          e.preventDefault();
+
+          subscribe($(this));
+        });
+
+        function subscribe($form) {
+          var path = $form.data('url');
+          var data = {
+            email: $form.find('input[name="email"]').val()
+          };
+
+          $form.find('input[name="email"]').val('');
+
+          $.post(path, data)
+            .done(function(data) {
+              $form.find('input[name="email"]').val('');
+              alert('Subscribed!')
+            })
+            .fail(function(err) {
+              alert('Failed :(')
+            });
+        }
+      });
+    </script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-54998154-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
   </body>
 </html>
