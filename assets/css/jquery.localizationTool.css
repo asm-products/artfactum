@@ -782,15 +782,17 @@
   right: 8px;
   top: 7px;
 }
+
+/* this is where you modify the tool appearence */
 .localizationTool {
-  color: #333333;
-  background: #8dc1e2;
   position: relative;
  width:160px;
+ border: 2px solid #fff;
+ border-radius: 5px;
 }
 .localizationTool .ltool-dropdown-label {
   display: block;
-  padding: 12px 50px 12px 12px;
+  padding: 12px 70px 12px 12px;
   color: #FFF;
   border: 0;
   position: relative;
@@ -822,30 +824,31 @@
 .localizationTool div {
   display: inline;
 }
-.localizationTool li {
+/* this is where you modify the dropdown */
+.localizationTool li { 
   display: block;
-  background: #deedf7;
-  padding: 10px;
+  border-bottom: 1px solid #fff;
+  padding: 12px 70px 12px 12px;
 }
-.localizationTool li.ltool-is-selected {
+/*.localizationTool li.ltool-is-selected { 
   background: #f5f1d6;
 }
 .localizationTool li:hover {
   background: #f5f1d6;
-}
+}*/
 .localizationTool img {
   width: 16px;
   height: 11px;
 }
 .localizationTool .ltool-language-name {
-  color: #8dc1e2;
+  color: #ddd;
 }
-.localizationTool .ltool-language-name:before {
+/*.localizationTool .ltool-language-name:before {
   content: '(';
 }
 .localizationTool .ltool-language-name:after {
   content: ')';
-}
+}*/
 .localizationTool .ltool-language-flag {
   display: block;
   float: left;

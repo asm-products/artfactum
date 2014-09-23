@@ -132,13 +132,14 @@ body {
 .signup .btn {
   width: 250px;
   color: #fff;
-  background-color:rgba(127, 185, 156, 1);
+  background-color:rgba(127, 185, 217, 1);
+  
   border: none;
   transition:  0.2s;
 }
 
 .signup .btn:hover {
-  background-color:rgba(127, 185, 217, 1);
+  background-color:rgba(127, 185, 156, 1);
 }
 
 ::-webkit-input-placeholder {
@@ -247,6 +248,39 @@ video#bgvid {
 #footer .left, #footer .right {
   float: none;
 }
+/* this is where you modify the tool appearence */
+.localizationTool {
+  color: #333333;
+  background: #8dc1e2;
+  position: relative;
+  border: none;
+  border-radius: 0;
+}
+.localizationTool .ltool-dropdown-label {
+  display: block;
+  padding: 12px 70px 12px 12px;
+  color: #fff;
+  border: 0;
+  position: relative;
+
+}
+/* this is where you modify the dropdown */
+
+.localizationTool li {
+  display: block;
+  background: #deedf7;
+  padding: 12px 70px 12px 12px;
+
+}
+.localizationTool li.ltool-is-selected {
+  background: #f5f1d6;
+}
+.localizationTool li:hover {
+  background: #f5f1d6;
+}
+.localizationTool .ltool-language-name {
+  color: #333;
+}
 }
 
 @media (min-device-width: 601px) and (max-device-width: 800px) {
@@ -305,7 +339,39 @@ video#bgvid {
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
+/* this is where you modify the tool appearence */
+.localizationTool {
+  color: #333333;
+  background: #8dc1e2;
+  position: relative;
+  border: none;
+  border-radius: 0;
+}
+.localizationTool .ltool-dropdown-label {
+  display: block;
+  padding: 12px 70px 12px 12px;
+  color: #fff;
+  border: 0;
+  position: relative;
 
+}
+/* this is where you modify the dropdown */
+
+.localizationTool li {
+  display: block;
+  background: #deedf7;
+  padding: 12px 70px 12px 12px;
+
+}
+.localizationTool li.ltool-is-selected {
+  background: #f5f1d6;
+}
+.localizationTool li:hover {
+  background: #f5f1d6;
+}
+.localizationTool .ltool-language-name {
+  color: #333;
+}
 
 }
 
