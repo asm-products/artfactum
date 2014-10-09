@@ -70,12 +70,14 @@ ga('send', 'pageview');
             <h1 class="cover-heading" id="tagline">WE EMPOWER ART LOVERS</h1>
             <p class="lead" id="description">Imagine a free community where art lovers and artists like you can interact, enhance your reputation, and find new opportunities.</p>
               <section class="signup">
-                 <form id="email-signup" role="form" data-url="https://assembly.com/api/products/artfactum/potential_users">
+                 <form action="//artfactum.us9.list-manage.com/subscribe/post?u=0402440a88c30caadfc24dc84&amp;id=e17135cd55" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_0402440a88c30caadfc24dc84_e17135cd55" tabindex="-1" value=""></div>
                   <div class="form-group">
                     <label class="sr-only" for="email">Email address</label>
-                    <input class="email form-control" type="email" name="email" placeholder="Enter email">
+                    <input class="email form-control" type="email" name="EMAIL" id="mce-EMAIL" placeholder="Enter email">
                     <p></p>
-                    <button type="submit" class="btn btn-default"><em><span id="artLover">I'm an Art Lover</span></em><br><small><span id="keepPosted">keep me posted</span></small></button>
+                    <button type="submit" class="btn btn-default" id="mc-embedded-subscribe" name="subscribe"><em><span id="artLover">I'm an Art Lover</span></em><br><small><span id="keepPosted">keep me posted</span></small></button>
                   </div>
                 </form>
 
@@ -138,31 +140,31 @@ ga('send', 'pageview');
       $("#bgvid").bind('ended', function(){
            this.play();
       });
+      
+// $(document).ready(function() {
+//   $('#email-signup').submit(function(e) {
+//     e.preventDefault();
 
-$(document).ready(function() {
-  $('#email-signup').submit(function(e) {
-    e.preventDefault();
+//     subscribe($(this));
+//     });
 
-    subscribe($(this));
-    });
+//   function subscribe($form) {
+//           var path = $form.data('url');
+//           var data = {
+//             email: $form.find('input[name="email"]').val()
+//           };
 
-  function subscribe($form) {
-          var path = $form.data('url');
-          var data = {
-            email: $form.find('input[name="email"]').val()
-          };
-
-        $form.find('input[name="email"]').val('');
-        $.post(path, data)
-            .done(function(data) {
-              $form.find('input[name="email"]').val('');
-              alert('Subscribed!')
-            })
-            .fail(function(err) {
-              alert('Failed :(')
-            });
-        }
-      });
+//         $form.find('input[name="email"]').val('');
+//         $.post(path, data)
+//             .done(function(data) {
+//               $form.find('input[name="email"]').val('');
+//               alert('Subscribed!')
+//             })
+//             .fail(function(err) {
+//               alert('Failed :(')
+//             });
+//         }
+//       });
 
 
 </script>
