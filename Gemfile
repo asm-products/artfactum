@@ -25,9 +25,11 @@ group :development, :test do
   gem 'web-console', '~> 2.0.0.beta4'
   gem 'spring'
   gem 'quiet_assets'
+  gem 'rspec-rails', '~> 3.0.0'
+  gem 'capybara'
+  gem 'factory_girl_rails'
 end
 
 group :production do
   gem 'rails_12factor'
 end
-
