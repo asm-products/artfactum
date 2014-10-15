@@ -20,6 +20,9 @@ gem 'carrierwave'
 # Server
 gem 'puma'
 
+gem 'simple_form'
+gem 'annotate', '~> 2.6.5'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0.0.beta4'
