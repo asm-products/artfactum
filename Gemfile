@@ -21,7 +21,7 @@ gem 'carrierwave'
 gem 'puma'
 
 gem 'simple_form'
-gem 'annotate', '~> 2.6.5'
+
 
 group :development, :test do
   gem 'byebug'
@@ -31,6 +31,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'capybara'
   gem 'factory_girl_rails'
+  gem 'annotate', '~> 2.6.5'
 end
 
 group :production do
