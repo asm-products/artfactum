@@ -34,6 +34,7 @@ group :development, :test do
   gem 'annotate', '~> 2.6.5'
   gem 'teaspoon'
   gem 'phantomjs'
+  gem 'simplecov', :require => false
 end
 
 group :production do
