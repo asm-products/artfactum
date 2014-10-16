@@ -32,6 +32,8 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'annotate', '~> 2.6.5'
+  gem 'teaspoon'
+  gem 'phantomjs'
 end
 
 group :production do
