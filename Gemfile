@@ -23,6 +23,8 @@ gem 'puma'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 
+gem 'simple_form'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0.0.beta4'
@@ -31,6 +33,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'capybara'
   gem 'factory_girl_rails'
+  gem 'annotate', '~> 2.6.5'
 end
 
 group :production do
