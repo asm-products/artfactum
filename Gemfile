@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'dotenv-rails', groups: [:development, :test]
+
 gem 'rails', '4.2.0.beta2'
 
 gem 'pg'
@@ -20,8 +22,11 @@ gem 'carrierwave'
 # Server
 gem 'puma'
 
-gem 'simple_form'
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
+gem 'bourbon'
 
+gem 'simple_form'
 
 group :development, :test do
   gem 'byebug'
