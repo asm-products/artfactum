@@ -107,7 +107,7 @@ body {
 .cover-heading {
   font-family: 'Amatic', serif;
   color: #fff;
-  font-size: 6em;
+  font-size: 5em;
   font-weight: 300;
   opacity: 0.8;
 }
@@ -128,6 +128,7 @@ body {
   margin: 0 auto;
   opacity: 0.8;
   max-width: 250px;
+  font-family: 'Open Sans', sans-serif;
 }
 .signup .btn {
   width: 250px;
