@@ -135,7 +135,7 @@ body {
   width: 250px;
   color: #fff;
   background-color:rgba(127, 185, 217, 1);
-  
+  text-transform: uppercase;
   border: none;
   transition:  0.2s;
 }
