@@ -1,7 +1,7 @@
 <a href="https://assembly.com/artfactum/"><img src="https://d1015h9unskp4y.cloudfront.net/attachments/e9e8d810-f5de-4467-be8e-81569dba9ee8/af_logo_cuadrado_plus.png" alt="logo" height="206px" width="206px"></a>
 
 #Artfactum
-Better way to discover new art
+Better way to discover new art.
 
 Artfactum is an online marketplace where artists and art lovers create virtual galleries to showcase and sell art to a global community.
 
