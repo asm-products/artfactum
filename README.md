@@ -1,17 +1,19 @@
-<a href="https://assembly.com/artfactum/">![Logo](https://d1015h9unskp4y.cloudfront.net/attachments/e9e8d810-f5de-4467-be8e-81569dba9ee8/af_logo_cuadrado_plus.png)</a>
+<a href="https://assembly.com/artfactum/"><img src="https://d1015h9unskp4y.cloudfront.net/attachments/e9e8d810-f5de-4467-be8e-81569dba9ee8/af_logo_cuadrado_plus.png" alt="logo" height="206px" width="206px"></a>
 
 #Artfactum
-Artfactum is the social network for art lovers: your ideal community for creating, collaborating and enjoying art with people all over the world.
+Better way to discover new art
+
+Artfactum is an online marketplace where artists and art lovers create virtual galleries to showcase and sell art to a global community.
 
 This is a product being built by the Assembly community. You can help push this idea forward by visiting https://assembly.com/atrfactum.
 
 
 ##Built With
 
-Ruby: 2.1.2
-Rails: 4.2
-PostgreSQL
-Plus lots of Ruby Gems, a complete list of which is at /master/Gemfile.
+- Ruby: 2.1.2
+- Rails: 4.2
+- PostgreSQL
+- Plus lots of Ruby Gems, a complete list of which is at /master/Gemfile.
 
 ##Getting Started
 
@@ -19,7 +21,7 @@ Follow the following steps to run artfactum locally:
 
 ###Clone the repo
       git clone https://github.com/asm-products/artfactum.git
-      cd helpful-web
+      cd artfactum
 
 ###Install the required gems 
       bundle install
