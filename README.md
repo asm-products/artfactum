@@ -1,7 +1,7 @@
 <a href="https://assembly.com/artfactum/">![Logo](https://d1015h9unskp4y.cloudfront.net/attachments/e9e8d810-f5de-4467-be8e-81569dba9ee8/af_logo_cuadrado_plus.png)</a>
 
 #Artfactum
-
+Artfactum is the social network for art lovers: your ideal community for creating, collaborating and enjoying art with people all over the world.
 
 This is a product being built by the Assembly community. You can help push this idea forward by visiting https://assembly.com/atrfactum.
 
