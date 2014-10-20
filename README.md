@@ -1,4 +1,4 @@
-<a href="https://assembly.com/artfactum/"><img src="https://d1015h9unskp4y.cloudfront.net/attachments/e9e8d810-f5de-4467-be8e-81569dba9ee8/af_logo_cuadrado_plus.png" alt="logo" height="206px" width="206px"></a>
+<a href="https://assembly.com/artfactum/"><img src="https://lh3.googleusercontent.com/mIcrSQj7BC9GQb8q4ILOZIMulQ6XCJL9kkl8VIfnGBQB0NEpPjOpsxbZw592IaejymFjteGbSbg=w1256-h547" alt="logo" ></a>
 
 #Artfactum
 Better way to discover new art.
