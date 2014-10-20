@@ -5,7 +5,7 @@ Better way to discover new art.
 
 Artfactum is an online marketplace where artists and art lovers create virtual galleries to showcase and sell art to a global community.
 
-This is a product being built by the Assembly community. You can help push this idea forward by visiting https://assembly.com/atrfactum.
+This is a product being built by the Assembly community. You can help push this idea forward by visiting https://assembly.com/artfactum.
 
 
 ##Built With
