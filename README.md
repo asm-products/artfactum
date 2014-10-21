@@ -1,5 +1,8 @@
 <a href="https://assembly.com/artfactum/"><img src="https://github.com/asm-products/artfactum/blob/master/public/assets/img/logo-dark.png" alt="logo" height="98px" width="244px"></a>
 
+[![CodeClimate](http://img.shields.io/codeclimate/github/asm-products/artfactum.svg?style=flat)](https://codeclimate.com/github/asm-products/artfactum) [![Coverage](http://img.shields.io/codeclimate/coverage/github/asm-products/artfactum.svg?style=flat)](https://codeclimate.com/github/asm-products/artfactum) [![Travis-CI](http://img.shields.io/travis/asm-products/artfactum.svg?style=flat)](https://travis-ci.org/asm-products/artfactum) [![Travis-CI](http://img.shields.io/gemnasium/asm-products/artfactum.svg?style=flat)](https://gemnasium.com/asm-products/artfactum)
+[![Inline docs](http://inch-ci.org/github/asm-products/artfactum.svg?branch=master&style=flat)](http://inch-ci.org/github/asm-products/artfactum)
+
 #Artfactum
 A Better way to discover new art.
 
