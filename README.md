@@ -15,5 +15,5 @@ This is a product being built by the Assembly community. You can help push this 
 - PostgreSQL
 - Plus lots of Ruby Gems, a complete list of which is at /master/Gemfile.
 
- Please see our [/master/CONTRIBUTING.md](https://github.com/asm-products/artfactum/blob/master/CONTRIBUTING.md) for instructions on how to set up your development environment for Artfactum.
+Please see our [/master/CONTRIBUTING.md](https://github.com/asm-products/artfactum/blob/master/CONTRIBUTING.md) for instructions on how to set up your development environment for Artfactum.
 
