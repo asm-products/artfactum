@@ -1,10 +1,19 @@
-artfactum
-=========
+<a href="https://assembly.com/artfactum/"><img src="https://github.com/asm-products/artfactum/blob/master/public/assets/img/logo-dark.png" alt="logo" height="98px" width="244px"></a>
 
-Artfactum is the social network for art lovers: your ideal community for creating, collaborating and enjoying art with people all over the world.
+#Artfactum
+A Better way to discover new art.
 
-### How Assembly Works
+Artfactum is an online marketplace where artists and art lovers create virtual galleries to showcase and sell art to a global community.
 
-Assembly products are like open-source and made with contributions from the community. Assembly handles the boring stuff like hosting, support, financing, legal, etc. Once the product launches we collect the revenue and split the profits amongst the contributors.
+This is a product being built by the Assembly community. You can help push this idea forward by visiting https://assembly.com/artfactum.
 
-Visit [https://assembly.com](https://assembly.com) to learn more.
+
+##Built With
+
+- Ruby: 2.1.2
+- Rails: 4.2
+- PostgreSQL
+- Plus lots of Ruby Gems, a complete list of which is at /master/Gemfile.
+
+Please see our [/master/CONTRIBUTING.md](https://github.com/asm-products/artfactum/blob/master/CONTRIBUTING.md) for instructions on how to set up your development environment for Artfactum.
+
