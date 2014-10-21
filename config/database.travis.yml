@@ -1,0 +1,4 @@
+test:
+  adapter: postgresql
+  database: artfactum_test
+  username: postgres
