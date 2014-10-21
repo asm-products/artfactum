@@ -1,0 +1,44 @@
+env:
+  global:
+  - DEVISE_SECRET_KEY=sdfkjn2342jk3b42342hk34b2k3j4b2jk34ksdlfopvjiwlkqemn23jeijprfdnkljsbgo324
+  - RAILS_ENV=test
+  - RACK_ENV=test
+  - AMAZON_S3_BUCKET=artfactum-bundle-cache
+  - AMAZON_ACCESS_KEY_ID=AKIAJBBUYB2AQNATGABA
+  - secure: Z/p5LzEYWhFpKOSK84qR6Jm0MznPm/yFaBg/EMfE+T9HrtslNnmoKQPCQ8DkS6a5RH3hpleCo55N+3cfHqgg2ta2HICgpqiNZ8xM9SJgRZyKWiNOgkmAL/HXKogr/dMiWAzSrGspa38G4gLpZL+UK59GO7lMKNgXh3jNt/icxIo=
+before_install:
+- echo '--colour' > ~/.rspec
+- 'echo ''gem: --no-document'' > ~/.gemrc'
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+install:
+- travis_retry script/cached-bundle install --deployment --without development
+before_script:
+- psql -c 'create database "artfactum_test";' -U postgres
+- cp config/database.travis.yml config/database.yml
+- bundle exec rake db:migrate RAILS_ENV=test
+script:
+- bundle exec rake
+- bundle exec rubocop -R --fail-level error
+language:
+- ruby
+notifications:
+  email:
+  - false
+rvm:
+- 2.1.2
+addons:
+  postgresql: '9.3'
+deploy:
+  provider: heroku
+  strategy: git
+  app:
+    master: artfactum-staging
+    production: artfactum
+  run:
+  - rake db:migrate
+  - restart
+  on:
+    repo: asm-products/artfactum
+  api_key:
+    secure: SCU8FCaYdmNCoHAcMOmzEe6jjAmBfOZiYVoXEQunDMa7hDwmCOkV2cl+MW1rr3dAmQsCVNeppU3g0h5MWLedU1hSZQCCoaMdjO0V9wBqMQC4oJxnJL98cLmlL+qjltqW5j9/aSKPf/M1GNF6UmX2B+Z+38RrQrEudUNtp0SAl+o=
