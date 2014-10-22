@@ -11,3 +11,9 @@ development:
 test:
   <<: *default
   database: artfactum_test
+
+production:
+  <<: *default
+  database: artfactum_production
+  username: artfactum
+  password: <%= ENV['ARTFACTUM_DATABASE_PASSWORD'] %>

@@ -1,4 +1,4 @@
-###Contributing
+###Contributing 
 
 Follow the following steps to run artfactum locally:
 
@@ -6,18 +6,14 @@ Follow the following steps to run artfactum locally:
       git clone https://github.com/asm-products/artfactum.git
       cd artfactum
 
-###Install the required gems
+###Install the required gems 
       bundle install
 
-###Setup Environment
-      cp database.example.yml database.yml
-      cp .example.env .env
-
-###Set up the database
+###Set up the database 
       rake db:setup
 
-###Run the app
-      bundle exec guard
+###Run the app 
+      bundle exec rails s
 
 ## Contributing
 This project's git flow is based on [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
