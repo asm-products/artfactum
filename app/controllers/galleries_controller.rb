@@ -1,8 +1,8 @@
 class GalleriesController < ApplicationController
-	before_action :find_gallery, only: [:show, :destroy]
+  before_action :find_gallery, only: [:show, :destroy]
   
   def index
-  	@galleries = Gallery.includes(:artworks).limit(1).page(params[:page])
+    @galleries = Gallery.includes(:artworks).limit(1).page(params[:page])
   end
 
   def show
@@ -27,10 +27,10 @@ class GalleriesController < ApplicationController
   private
 
   def find_gallery
-  	@gallery = Gallery.find(params[:id])
+    @gallery = Gallery.find(params[:id])
   end
 
   def gallery_params
-  	params.require(:gallery).permit(:name, :user_id)
+    params.require(:gallery).permit(:name, :user_id)
   end
 end
