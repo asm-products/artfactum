@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="page-header">
+  	<ol class="breadcrumb">
+  		<li><a href=<%= root_path %>>Artfactum</a></li>
+  		<li><a href=<%= galleries_path %>>Galleries</a></li>
+  		<li class="active"><%= @gallery.name %></li>
+  	</ol>
+  </div>
+  <%= render 'shared/artworks' %>
+</div>
