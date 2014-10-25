@@ -18,10 +18,12 @@ gem 'devise'
 
 # Uploading
 gem 'carrierwave'
+gem 'carrierwave-aws'
 
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'bourbon'
+gem 'kaminari'
 
 gem 'simple_form'
 
