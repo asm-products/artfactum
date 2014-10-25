@@ -1,5 +1,6 @@
 class ArtworksController < ApplicationController
   before_action :find_artwork, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @artworks = Artwork.page(params[:page])

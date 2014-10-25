@@ -1,5 +1,6 @@
 class GalleriesController < ApplicationController
   before_action :find_gallery, only: [:show, :destroy]
+  skip_before_action :authenticate_user!, only: [:index, :show]
   
   def index
     @galleries = Gallery.includes(:artworks).limit(1).page(params[:page])
