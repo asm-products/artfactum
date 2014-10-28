@@ -3,15 +3,16 @@
 <head>
   <title>Artfactum</title>
   <%= favicon_link_tag 'favicon.ico' %>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300|Amatic+SC' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= render 'shared/navbar' %>
-
+<%= render 'navbar' if user_signed_in? %>
+<%= render 'homebar' unless user_signed_in? %>
+<%= render 'flashes' %>
 <%= yield %>
-
+<%= render 'footer' %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>

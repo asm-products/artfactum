@@ -1,0 +1,56 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="<%= root_path %>"><%= image_tag 'side_logo.png', alt: 'Artfactum' %></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="navbar-right">
+        <ul class="nav navbar-nav navbar-form">
+          <a href="#"  data-toggle="modal" data-target="#myModal" class="btn btn-primary">Sign In or Sign Up</a>
+        </ul>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel"><%= image_tag 'side_logo_dark.png', alt: 'Artfactum', height: 40 %></h4>
+      </div>
+      <div class="modal-body text-center">
+        <p>Sign in to Artfactum or create an account</p>
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <a class="btn btn-block btn-social btn-facebook" href="<%= user_omniauth_authorize_path(:facebook) %>">
+              <%= icon 'facebook' %>
+              Sign in with Facebook
+            </a>
+            <a class="btn btn-block btn-social btn-twitter" href="<%= user_omniauth_authorize_path(:twitter) %>">
+              <%= icon 'twitter' %>
+              Sign in with Twitter
+            </a>
+            <a class="btn btn-block btn-social btn-google-plus" href="<%= user_omniauth_authorize_path(:google_oauth2) %>">
+              <%= icon 'google' %>
+              Sign in with Google+
+            </a>
+          </div>
+        </div>
+        <hr>
+        <small class="text-muted text-center">We will never post to your Facebook, Twitter, or Google+ without your permission.</small>
+      </div>
+    </div>
+  </div>
+</div>
