@@ -16,15 +16,26 @@ gem 'high_voltage'
 
 # Authentication
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-google-oauth2'
 
 # Uploading
 gem 'carrierwave'
 
 gem 'bootstrap-sass', '~> 3.2.0'
+gem 'font-awesome-sass'
 gem 'autoprefixer-rails'
-gem 'bourbon'
 
 gem 'simple_form'
+gem 'draper'
+
+# Social Networking
+gem 'acts_as_follower'
+gem 'acts_as_commentable_with_threading'
+gem 'acts_as_votable'
+gem 'public_activity'
 
 group :staging, :production do
   gem 'rails_12factor'
