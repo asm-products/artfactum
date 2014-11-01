@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Artfactum</title>
+  <title><%= content_for(:title) || title %><%= " ‹ #{t 'titles.application'}" if content_for(:title) %></title>
   <%= favicon_link_tag 'favicon.ico' %>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300|Amatic+SC' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
