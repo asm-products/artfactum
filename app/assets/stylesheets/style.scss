@@ -122,6 +122,12 @@ body {
     }
   }
 }
+.content {
+  padding: 20px;
+  &.white {
+    background-color: white;
+  }
+}
 .modal-backdrop {
   background-color: white;
   &.in {

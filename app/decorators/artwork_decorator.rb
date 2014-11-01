@@ -1,0 +1,2 @@
+class ArtworkDecorator < ApplicationDecorator
+end

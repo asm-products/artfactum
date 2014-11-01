@@ -6,9 +6,13 @@ class Artwork < ActiveRecord::Base
 
   has_many :attachments
 
-  scope :recent, -> { where("created_at between ? and ?", Date.today.beginning_of_day, Date.today.end_of_day) }
+  scope :recent, (lambda do
+    where('created_at between ? and ?',
+          Date.today.beginning_of_day,
+          Date.today.end_of_day)
+  end)
 
-  validates :title, :image, presence: true
+  validates :title, presence: true
 
   paginates_per 12
 end

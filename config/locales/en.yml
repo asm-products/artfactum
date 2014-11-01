@@ -1,6 +1,13 @@
 en:
   titles:
     application: Artfactum
+    artworks:
+      index: "Artworks"
+      show: "%{artwork_name}"
+      edit: "%{artwork_name}"
+      update: "%{artwork_name}"
+      new: "Create a New artwork"
+      create: "Create a New artwork"
   action:
     destroy:
       link: 'Delete %{item}'
@@ -14,3 +21,14 @@ en:
       title: 404 Not Found
       lead: "Looks like the page you were looking for was either removed, broken or doesn't exist."
       home: Go Home
+  artworks:
+    create:
+      success: Successfully created your artwork
+      error: There was a problem creating your artwork
+    update:
+      success: Successfully updated your artwork
+      error: There was a problem updating your artwork
+    destroy:
+      info: Successfully deleted your artwork
+    show:
+      edit: Edit Artwork

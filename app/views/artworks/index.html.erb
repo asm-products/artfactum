@@ -1,16 +1,18 @@
-<div class="container">
-	<div class="row">
-	
-	<div class="col-md-3">
-		<div class="list-group">
-		  <a href=<%= artworks_path %> class="list-group-item">All</a>
-			<a href=<%= artworks_path(sort: "recent") %> class="list-group-item">Recent</a>
-		</div>
-	</div>
+<div class="content white">
+	<div class="container">
+		<div class="row">
 
-		<div class="col-md-7">
-			<%= render 'shared/artworks' %>
+		<div class="col-md-3">
+			<div class="list-group">
+			  <a href=<%= artworks_path %> class="list-group-item">All</a>
+				<a href=<%= artworks_path(recent: true) %> class="list-group-item">Recent</a>
+			</div>
 		</div>
 
+			<div class="col-md-7">
+				<%= render 'shared/artworks' %>
+			</div>
+
+		</div>
 	</div>
 </div>
