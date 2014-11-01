@@ -1,0 +1,14 @@
+<div class="row">
+<% @artworks.each do |artwork| %>
+		<div class="col-xs-6 col-md-4">
+			<a href=<%= artwork_path(artwork) %> class="thumbnail">
+        <%= image_tag(artwork.image_url) %>
+			</a>
+		</div>
+<% end %>
+</div>
+
+<div class="text-center">
+  <%= page_entries_info @artworks %>
+  <%= paginate @artworks %>
+</div>

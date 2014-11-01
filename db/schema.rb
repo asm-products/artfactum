@@ -33,6 +33,39 @@ ActiveRecord::Schema.define(version: 20141026203525) do
   add_index "activities", ["recipient_id", "recipient_type"], name: "index_activities_on_recipient_id_and_recipient_type", using: :btree
   add_index "activities", ["trackable_id", "trackable_type"], name: "index_activities_on_trackable_id_and_trackable_type", using: :btree
 
+  create_table "artworks", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "gallery_id"
+    t.string   "title"
+    t.text     "description"
+    t.string   "image"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "artworks", ["gallery_id"], name: "index_artworks_on_gallery_id", using: :btree
+  add_index "artworks", ["user_id"], name: "index_artworks_on_user_id", using: :btree
+
+  create_table "attachments", force: true do |t|
+    t.integer  "artworks_id"
+    t.integer  "user_id"
+    t.string   "file"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "attachments", ["artworks_id"], name: "index_attachments_on_artworks_id", using: :btree
+  add_index "attachments", ["user_id"], name: "index_attachments_on_user_id", using: :btree
+
+  create_table "galleries", force: true do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "galleries", ["user_id"], name: "index_galleries_on_user_id", using: :btree
+
   create_table "user_authentications", force: true do |t|
     t.integer  "user_id"
     t.integer  "provider_id"

@@ -49,6 +49,11 @@ GEM
       execjs
     awesome_nested_set (3.0.1)
       activerecord (>= 4.0.0, < 5)
+    aws-sdk (1.57.0)
+      aws-sdk-v1 (= 1.57.0)
+    aws-sdk-v1 (1.57.0)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
     bcrypt (3.1.7)
     better_errors (2.0.0)
       coderay (>= 1.0.0)
@@ -83,6 +88,9 @@ GEM
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
+    carrierwave-aws (0.4.1)
+      aws-sdk (>= 1.29)
+      carrierwave (>= 0.7)
     celluloid (0.16.0)
       timers (~> 4.0.0)
     codeclimate-test-reporter (0.4.1)
@@ -188,6 +196,9 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.1)
     jwt (1.0.0)
+    kaminari (0.16.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     launchy (2.4.2)
       addressable (~> 2.3)
     listen (2.7.11)
@@ -407,6 +418,7 @@ DEPENDENCIES
   capybara-screenshot
   capybara-webkit
   carrierwave
+  carrierwave-aws
   codeclimate-test-reporter
   coffee-rails
   database_cleaner
@@ -428,6 +440,7 @@ DEPENDENCIES
   i18n-tasks
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari
   launchy
   newrelic_rpm
   omniauth
