@@ -11,12 +11,6 @@ module Users
     def google_oauth2
     end
 
-    def failure
-      flash[:error] =
-        params[:message] || 'There was a problem signing in with your account'
-      redirect_to root_path
-    end
-
     protected
 
     def authenticate(hash = request.env['omniauth.auth'])

@@ -39,4 +39,30 @@ describe ApplicationHelper do
       end
     end
   end
+
+  describe '#page_title' do
+    context 'no hash' do
+      it 'returns the app name' do
+        expect(helper.page_title).to eq(t 'titles.application')
+      end
+    end
+  end
+
+  describe '#destroy_link_to' do
+    let(:item) { { item: 'User' } }
+    subject { helper.destroy_link_to root_path, item }
+    it do
+      is_expected.to(
+      have_selector('a.btn.btn-danger.btn-sm'\
+        "[data-confirm='#{t('action.destroy.confirm.body', item)}']"\
+        '[data-confirm-fade=true]'\
+        "[data-confirm-title='#{t('action.destroy.confirm.title', item)}']"\
+        "[data-confirm-cancel='#{t('action.destroy.confirm.cancel', item)}']"\
+        "[data-confirm-cancel-class='btn-default']"\
+        "[data-confirm-proceed='#{t('action.destroy.confirm.proceed', item)}']"\
+        "[data-confirm-proceed-class='btn-danger']",
+                    text: t('action.destroy.link', item))
+      )
+    end
+  end
 end

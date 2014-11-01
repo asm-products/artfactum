@@ -17,10 +17,10 @@ module ApplicationHelper
     returnable
   end
 
-  def destroy_link_to(path, options)
-    link_to t('action.destroy.link', item: options[:item]),
+  def destroy_link_to(path, item)
+    link_to t('action.destroy.link', item),
             path,
-            destroy_link_to_options(item: options[:item])
+            destroy_link_to_options(item)
   end
 
   private
