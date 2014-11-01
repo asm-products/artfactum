@@ -13,6 +13,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'recipient_interceptor'
 gem 'high_voltage'
+gem 'i18n-tasks'
+gem 'title'
 
 # Authentication
 gem 'devise'
@@ -55,6 +57,8 @@ group :test do
   gem 'capybara-screenshot'
   gem 'capybara-angular'
   gem 'launchy'
+  gem 'webmock'
+  gem 'formulaic'
   gem 'vcr'
 end
 

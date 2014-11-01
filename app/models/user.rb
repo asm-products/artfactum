@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   devise :omniauthable, :trackable
   has_many :authentications, dependent: :destroy
+  has_many :apps
 
   def self.create_from_omniauth(params)
     attributes = {
@@ -9,7 +10,8 @@ class User < ActiveRecord::Base
       last_name: params[:info][:last_name],
       avatar_url: params[:info][:image]
     }
-
     create attributes
+  rescue NoMethodError
+    false
   end
 end
