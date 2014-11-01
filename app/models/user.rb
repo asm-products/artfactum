@@ -1,7 +1,9 @@
 class User < ActiveRecord::Base
   devise :omniauthable, :trackable
   has_many :authentications, dependent: :destroy
-  has_many :apps
+  has_many :artworks
+  has_many :galleries
+  has_many :attachments, through: :artworks
 
   def self.create_from_omniauth(params)
     attributes = {

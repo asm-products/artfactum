@@ -15,3 +15,6 @@ database.yml
 vendor/bundle
 /*.tgz
 /.dpl
+
+# Ignore uploads
+/public/uploads

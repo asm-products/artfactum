@@ -1,0 +1,12 @@
+<%= image_tag(@artwork.image_url) if @artwork.image %>
+
+<%= simple_form_for @artwork, defaults: { input_html: { class: 'form-control'} } do |f| %>
+  <p><%= f.input_field :title, placeholder: 'Artwork title' %></p>
+  <p><%= f.input_field :description, placeholder: 'Artwork description' %></p>
+  <% if current_user.galleries.any? %>
+  <p><%= f.input :gallery, collection: current_user.galleries, prompt: 'You can add this to one of your galleries (optional)' %></p>
+  <% end %>
+  <p><%= f.file_field :image %></p>
+  <%= f.hidden_field :image_cache %>
+  <%= f.submit 'Submit', class: 'btn btn-success' %>
+<% end %>
