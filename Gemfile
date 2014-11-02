@@ -64,6 +64,7 @@ group :test do
   gem 'webmock'
   gem 'formulaic'
   gem 'vcr'
+  gem 'bullet'
 end
 
 group :test, :development do
