@@ -1,10 +1,10 @@
 class Artwork < ActiveRecord::Base
-  mount_uploader :image, ArtUploader
+  mount_uploader :image, ArtworkUploader
 
   belongs_to :user
   belongs_to :gallery
 
-  has_many :attachments
+  has_many :attachments, dependent: :destroy
 
   scope :recent, (lambda do
     where('created_at between ? and ?',

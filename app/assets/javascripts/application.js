@@ -13,7 +13,6 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
-//= require turbolinks
 //= require confirmation-modal
 //= require_tree .
 function adjustModalMaxHeightAndPosition(){

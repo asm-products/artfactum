@@ -128,6 +128,31 @@ body {
     background-color: white;
   }
 }
+.navbar {
+  font-weight: bold;
+  .navbar-brand {
+    padding: 15px;
+  }
+  .navbar-nav {
+    > li {
+      > a {
+        padding: 20px 15px;
+        margin: 0 5px 0 0;
+      }
+      &.active {
+        > a {
+          color: $brand-primary;
+          background-color: transparent;
+          border-bottom: 5px solid $brand-primary;
+          padding-bottom: 15px;
+          &:hover {
+            color: $brand-primary;
+          }
+        }
+      }
+    }
+  }
+}
 .modal-backdrop {
   background-color: white;
   &.in {

@@ -6,7 +6,7 @@ RSpec.describe Artwork, type: :model do
   describe 'associations' do
     it { is_expected.to belong_to(:user) }
     it { is_expected.to belong_to(:gallery) }
-    it { is_expected.to have_many(:attachments) }
+    it { is_expected.to have_many(:attachments).dependent(:destroy) }
   end
   describe 'attributes' do
     it { is_expected.to respond_to(:title) }
