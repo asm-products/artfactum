@@ -1,0 +1,4 @@
+# config/i18n-tasks.yml
+# do not report these keys as unused
+ignore_unused:
+  - titles.*

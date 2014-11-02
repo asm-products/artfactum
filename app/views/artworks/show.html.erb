@@ -1,7 +1,12 @@
 <div class="content white">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-8">
+			  <div class="thumbnail">
+				  <%= image_tag(@artwork.image_url) %>
+				</div>
+			</div>
+			<div class="col-md-4">
 
 			<div class="page-header">
 				<h4>
@@ -12,10 +17,6 @@
 	      <% end %>
 				</small></h4>
 			</div>
-
-			  <a class="thumbnail" href="#">
-				  <%= image_tag(@artwork.image_url) %>
-				</a>
 
 				<div class="page-header">
 					<h4>Inspiration</h4>

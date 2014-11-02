@@ -6,8 +6,15 @@ en:
       show: "%{artwork_name}"
       edit: "%{artwork_name}"
       update: "%{artwork_name}"
-      new: "Create a New artwork"
-      create: "Create a New artwork"
+      new: "Upload an Artwork"
+      create: "Upload an Artwork"
+    galleries:
+      index: "Galleries"
+      show: "%{gallery_name}"
+      edit: "%{gallery_name}"
+      update: "%{gallery_name}"
+      new: "Create a Gallery"
+      create: "Create a Gallery"
   action:
     destroy:
       link: 'Delete %{item}'
@@ -21,14 +28,36 @@ en:
       title: 404 Not Found
       lead: "Looks like the page you were looking for was either removed, broken or doesn't exist."
       home: Go Home
+  application:
+    navbar:
+      artwork:
+        title: Artwork
+        new: Upload an Artwork
+        recent: Recent Artwork
+        index: All Artwork
+      gallery:
+        title: Galleries
+        new: Create a Gallery
+        index: All Galleries
   artworks:
     create:
-      success: Successfully created your artwork
-      error: There was a problem creating your artwork
+      success: Successfully created your Artwork
+      error: There was a problem creating your Artwork
     update:
-      success: Successfully updated your artwork
-      error: There was a problem updating your artwork
+      success: Successfully updated your Artwork
+      error: There was a problem updating your Artwork
     destroy:
-      info: Successfully deleted your artwork
+      info: Successfully deleted your Artwork
     show:
       edit: Edit Artwork
+  galleries:
+    create:
+      success: Successfully created your Gallery
+      error: There was a problem creating your Gallery
+    update:
+      success: Successfully updated your Gallery
+      error: There was a problem updating your Gallery
+    destroy:
+      info: Successfully deleted your Gallery
+    show:
+      edit: Edit Gallery

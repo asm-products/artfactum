@@ -1,10 +1,20 @@
-<div class="container">
-  <div class="page-header">
-  	<ol class="breadcrumb">
-  		<li><a href=<%= root_path %>>Artfactum</a></li>
-  		<li><a href=<%= galleries_path %>>Galleries</a></li>
-  		<li class="active"><%= @gallery.name %></li>
-  	</ol>
+<div class="content white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="page-header">
+          <h4>
+          <%= page_title gallery_name: @gallery.title.capitalize %>
+          <small class="pull-right">
+            <% if current_user == @gallery.user %>
+              <%= link_to t('.edit'), edit_gallery_path(@gallery), class: 'btn btn-success btn-sm' %>
+              <%= destroy_link_to gallery_path(@gallery), item: 'Gallery' %>
+            <% end %>
+            </small>
+          </h4>
+        </div>
+        <%= render 'shared/artworks' %>
+      </div>
+    </div>
   </div>
-  <%= render 'shared/artworks' %>
 </div>
