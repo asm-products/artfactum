@@ -3,12 +3,10 @@ class ArtworksController < ApplicationController
   has_scope :recent, type: :boolean
 
   def index
-    load_artworks
     decorate_artworks
   end
 
   def show
-    load_artwork
     decorate_artwork
   end
 
