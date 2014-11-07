@@ -1,4 +1,3 @@
-# Users
-
-u = User.new(username: 'artfactum', email: 'artfactum@artfactum.co', password: 'password', password_confirmation: 'password', admin: true)
-u.save!
+User::Provider.create(name: 'facebook')
+User::Provider.create(name: 'twitter')
+User::Provider.create(name: 'google_oauth2')

@@ -1,8 +1,17 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+  devise :omniauthable, :trackable
+  has_many :authentications, dependent: :destroy
+  has_many :apps
 
-  validates :username, uniqueness: { case_sensitive: false }
+  def self.create_from_omniauth(params)
+    attributes = {
+      email: params[:info][:email] || '',
+      first_name: params[:info][:first_name] || params[:info][:name],
+      last_name: params[:info][:last_name],
+      avatar_url: params[:info][:image]
+    }
+    create attributes
+  rescue NoMethodError
+    false
+  end
 end
