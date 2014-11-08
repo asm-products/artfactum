@@ -9,6 +9,10 @@ Rails.application.routes.draw do
     get 'sign_in' => redirect('/'), as: :new_session
   end
   authenticated :user do
-    root to: 'feed#index', as: 'authenticated_root'
+    root 'artworks#index', as: 'authenticated_root'
+    resources :artworks do
+      resources :attachments
+    end
+    resources :galleries
   end
 end

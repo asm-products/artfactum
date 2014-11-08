@@ -25,10 +25,14 @@ gem 'omniauth-google-oauth2'
 
 # Uploading
 gem 'carrierwave'
+gem 'carrierwave-aws'
 
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'font-awesome-sass'
 gem 'autoprefixer-rails'
+gem 'kaminari'
+gem 'has_scope'
+gem 'ransack'
 
 gem 'simple_form'
 gem 'draper'
@@ -60,6 +64,7 @@ group :test do
   gem 'webmock'
   gem 'formulaic'
   gem 'vcr'
+  gem 'bullet'
 end
 
 group :test, :development do

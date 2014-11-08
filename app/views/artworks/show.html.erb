@@ -1,0 +1,29 @@
+<div class="content white">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+			  <div class="thumbnail">
+				  <%= image_tag(@artwork.image_url) %>
+				</div>
+			</div>
+			<div class="col-md-4">
+
+			<div class="page-header">
+				<h4>
+      	<%= page_title artwork_name: @artwork.title.capitalize %><small class="pull-right">
+	      <% if current_user == @artwork.user %>
+					<%= link_to t('.edit'), edit_artwork_path(@artwork), class: 'btn btn-success btn-sm' %>
+					<%= destroy_link_to artwork_path(@artwork), item: 'Artwork' %>
+	      <% end %>
+				</small></h4>
+			</div>
+
+				<div class="page-header">
+					<h4>Inspiration</h4>
+				</div>
+
+				<%= @artwork.description %>
+			</div>
+		</div>
+	</div>
+</div>

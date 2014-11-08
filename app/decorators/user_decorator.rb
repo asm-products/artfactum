@@ -1,6 +1,4 @@
-class UserDecorator < Draper::Decorator
-  delegate_all
-
+class UserDecorator < ApplicationDecorator
   def name
     "#{first_name} #{last_name}".strip
   end

@@ -1,0 +1,4 @@
+<%= simple_form_for @gallery, defaults: { input_html: { class: 'form-control' } } do |f| %>
+<p><%= f.input :title, placeholder: "Give your gallery a title" %></p>
+<p><%= f.submit "Submit", class: 'btn btn-success' %></p>
+<% end %>

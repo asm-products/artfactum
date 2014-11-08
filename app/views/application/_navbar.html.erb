@@ -13,6 +13,23 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
+        <li class="dropdown <%= 'active' if params[:controller] == 'artworks' %>">
+          <a href="<%= artworks_path %>" class="dropdown-toggle" data-toggle="dropdown"><%= t '.artwork.title' %> <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="<%= artworks_path %>"><%= t '.artwork.index' %></a></li>
+            <li><a href="<%= artworks_path(recent: true) %>"><%= t '.artwork.recent' %></a></li>
+            <li class="divider"></li>
+            <li><%= link_to t('.artwork.new'), new_artwork_path %></li>
+          </ul>
+        </li>
+        <li class="dropdown <%= 'active' if params[:controller] == 'galleries' %>">
+          <a href="<%= artworks_path %>" class="dropdown-toggle <%= 'active' if params[:controller] == 'artworks' %>" data-toggle="dropdown"><%= t '.gallery.title' %> <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="<%= galleries_path %>"><%= t '.gallery.index' %></a></li>
+            <li class="divider"></li>
+            <li><%= link_to t('.gallery.new'), new_gallery_path %></li>
+          </ul>
+        </li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">

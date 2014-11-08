@@ -1,0 +1,18 @@
+<div class="content white">
+	<div class="container">
+		<div class="row">
+			<% @galleries.each do |gallery| %>
+				<div class="col-sm-6 col-md-3">
+					<div class="thumbnail">
+					<% gallery.artworks.each do |artwork| %>
+						<%= image_tag(artwork.image_url) %>
+					<% end %>
+					<div class="caption">
+						<h3><%= link_to "#{gallery.title}", gallery_path(gallery) %></h3>
+					</div>
+					</div>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>
