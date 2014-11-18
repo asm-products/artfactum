@@ -9,8 +9,9 @@
 
       <div class="list-group">
         <a href=<%= artworks_path %> class="list-group-item">All Categories</a>
-        <% Category.includes(:sub_categories).order(artworks_count: :asc).each do |category| %>
-          <a href=<%= categories_path(category_id: category.id) %> class="list-group-item"><%= category.name %> <span class="badge pull-right"><%= category.artworks_count %></span></a>
+        <a href=<%= categories_path(@category.id) %> class="list-group-item active"><%= @category.name %></a>
+        <% @sub_categories.each do |sub_category| %>
+          <a href=<%= sub_categories_path(sub_category_id: sub_category.slug) %> class="list-group-item"><%= sub_category.name %> </a>
         <% end %>
       </div>
 

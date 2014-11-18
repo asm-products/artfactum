@@ -92,7 +92,8 @@ class ArtworksController < ApplicationController
     def self.permit(params)
       return {} unless params[:artwork]
       params.require(:artwork)
-            .permit(:title, :description, :image, :gallery_id, :image_cache)
+            .permit(:title, :description, :image, :gallery_id, 
+              :category_id, :sub_category_id, :image_cache)
     end
   end
 end
