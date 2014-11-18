@@ -10,5 +10,6 @@
   <% end %>
   <p><%= f.association :category, prompt: "Choose a category" %></p>
   <p><%= f.association :sub_category, prompt: "Choose a sub category" %></p>
+  <p><%= f.input :tag_list, placeholder: "some tag, another tag" %></p>
   <%= f.submit 'Submit', class: 'btn btn-success' %>
 <% end %>

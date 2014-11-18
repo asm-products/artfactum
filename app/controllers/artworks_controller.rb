@@ -93,7 +93,7 @@ class ArtworksController < ApplicationController
       return {} unless params[:artwork]
       params.require(:artwork)
             .permit(:title, :description, :image, :gallery_id, 
-              :category_id, :sub_category_id, :image_cache)
+              :category_id, :sub_category_id, :tag_list, :image_cache)
     end
   end
 end

@@ -11,7 +11,7 @@
         <a href=<%= artworks_path %> class="list-group-item">All Categories</a>
         <a href=<%= categories_path(@category.id) %> class="list-group-item active"><%= @category.name %></a>
         <% @sub_categories.each do |sub_category| %>
-          <a href=<%= sub_categories_path(sub_category_id: sub_category.slug) %> class="list-group-item"><%= sub_category.name %> </a>
+          <a href=<%= sub_categories_path(sub_category_id: sub_category.slug) %> class="list-group-item"><%= sub_category.name %> <span class="badge pull-right"><%= sub_category.artworks_count %></span></a>
         <% end %>
       </div>
 
