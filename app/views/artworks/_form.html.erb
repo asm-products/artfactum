@@ -3,10 +3,13 @@
 <%= simple_form_for @artwork, defaults: { input_html: { class: 'form-control'} } do |f| %>
   <p><%= f.input :title, placeholder: 'Artwork title' %></p>
   <p><%= f.input :description, placeholder: 'Artwork description' %></p>
+  <p><%= f.file_field :image %></p>
+  <%= f.hidden_field :image_cache %>
   <% if current_user.galleries.any? %>
   <p><%= f.association :gallery, collection: current_user.galleries, prompt: 'You can add this to one of your galleries (optional)' %></p>
   <% end %>
-  <p><%= f.file_field :image %></p>
-  <%= f.hidden_field :image_cache %>
+  <p><%= f.association :category, prompt: "Choose a category" %></p>
+  <p><%= f.association :sub_category, prompt: "Choose a sub category" %></p>
+  <p><%= f.input :tag_list, placeholder: "some tag, another tag" %></p>
   <%= f.submit 'Submit', class: 'btn btn-success' %>
 <% end %>
