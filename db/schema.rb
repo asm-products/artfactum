@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141102030002) do
+ActiveRecord::Schema.define(version: 20141118194755) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,12 +48,24 @@ ActiveRecord::Schema.define(version: 20141102030002) do
     t.string   "title"
     t.text     "description"
     t.string   "image"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "category_id"
+    t.integer  "sub_category_id"
   end
 
   add_index "artworks", ["gallery_id"], name: "index_artworks_on_gallery_id", using: :btree
   add_index "artworks", ["user_id"], name: "index_artworks_on_user_id", using: :btree
+
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.integer  "artworks_count", default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "categories", ["slug"], name: "index_categories_on_slug", unique: true, using: :btree
 
   create_table "galleries", force: true do |t|
     t.integer  "user_id"
@@ -63,6 +75,34 @@ ActiveRecord::Schema.define(version: 20141102030002) do
   end
 
   add_index "galleries", ["user_id"], name: "index_galleries_on_user_id", using: :btree
+
+  create_table "sub_categories", force: true do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.integer  "category_id"
+    t.integer  "artworks_count", default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sub_categories", ["category_id"], name: "index_sub_categories_on_category_id", using: :btree
+  add_index "sub_categories", ["slug"], name: "index_sub_categories_on_slug", unique: true, using: :btree
+
+  create_table "taggings", force: true do |t|
+    t.integer  "tag_id"
+    t.integer  "artwork_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "taggings", ["artwork_id"], name: "index_taggings_on_artwork_id", using: :btree
+  add_index "taggings", ["tag_id"], name: "index_taggings_on_tag_id", using: :btree
+
+  create_table "tags", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "user_authentications", force: true do |t|
     t.integer  "user_id"

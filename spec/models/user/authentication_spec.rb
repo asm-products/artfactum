@@ -48,7 +48,7 @@ RSpec.describe User::Authentication, type: :model do
         it 'fails gracefully' do
           expect(
             User::Authentication.create_from_omniauth(nil, user, provider))
-          .to eq(false)
+            .to eq(false)
         end
       end
     end
