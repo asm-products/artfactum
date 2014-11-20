@@ -20,7 +20,9 @@ class CategoriesController < ApplicationController
   end
 
   def load_sub_category
-    @sub_category = @category.sub_categories.where('slug = ?', params[:sub_category_id]).first if @category
+    return unless @category
+    @sub_category =
+      @category.sub_categories.where('slug = ?', params[:sub_category_id]).first
   end
 
   def filter_categories
@@ -30,6 +32,7 @@ class CategoriesController < ApplicationController
   end
 
   def load_artworks
-    @artworks = @category.artworks.where(@artworks_filter).page(params[:page]) if @category
+    return unless @category
+    @artworks = @category.artworks.where(@artworks_filter).page(params[:page])
   end
 end

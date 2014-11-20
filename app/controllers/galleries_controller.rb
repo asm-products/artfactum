@@ -101,7 +101,7 @@ class GalleriesController < ApplicationController
     def self.permit(params)
       return {} unless params[:gallery]
       params.require(:gallery)
-            .permit(:title)
+        .permit(:title)
     end
   end
 end

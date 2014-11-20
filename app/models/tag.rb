@@ -2,9 +2,9 @@ class Tag < ActiveRecord::Base
   has_many :taggings
   has_many :artworks, through: :taggings
 
-  scope :popular, -> { 
-    joins(:artworks).order('artworks.count DESC').group('tags.id') 
-  }
+  scope :popular, (lambda do
+    joins(:artworks).order('artworks.count DESC').group('tags.id')
+  end)
 
   validates :name, presence: true, uniqueness: { case_sensitive: false }
 

@@ -10,9 +10,10 @@ class Artwork < ActiveRecord::Base
   has_many :taggings, inverse_of: :artwork
   has_many :tags, through: :taggings
 
-  scope :recent, -> { 
-    where(created_at: Range.new(Date.today.beginning_of_day, Date.today.end_of_day)) 
-  }
+  scope :recent, (lambda do
+    where created_at: Range.new(Date.today.beginning_of_day,
+                                Date.today.end_of_day)
+  end)
 
   validates :title, presence: true
 

@@ -26,7 +26,7 @@ module Users
 
     def find_user(hash)
       User.find_by(email: hash['info']['email']) ||
-      User.create_from_omniauth(hash)
+        User.create_from_omniauth(hash)
     end
   end
 end
