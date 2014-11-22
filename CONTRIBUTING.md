@@ -15,13 +15,13 @@ Follow the following steps to run artfactum locally:
 
 ###**Install Vagrant**
 
-    [Vagrant](http://vagrantup.com) is the recommended way to run Artfactum on your own machine. You need to download and install.
-    Grab the Vagrant installer from **[here](http://www.vagrantup.com/downloads.html)**.
+[Vagrant](http://vagrantup.com) is the recommended way to run Artfactum on your own machine. You need to download and install.
+Grab the Vagrant installer from **[here](http://www.vagrantup.com/downloads.html)**.
 
-    Follow the [installation instructions](https://docs.vagrantup.com/v2/installation/) for your platform on the Vagrant download page.
+Follow the [installation instructions](https://docs.vagrantup.com/v2/installation/) for your platform on the Vagrant download page.
 
-    When the installation
-    If you're on a OS X/Linux system you can install the plugins by running:
+When the installation
+If you're on a OS X/Linux system you can install the plugins by running:
 
         vagrant plugin install vagrant-vbguest
         vagrant plugin install vagrant-cachier
@@ -29,7 +29,7 @@ Follow the following steps to run artfactum locally:
 
 
 
-4. **Vagrant UP !!!**
+###**Vagrant UP !!!**
 
     Now that you've got VirtualBox and Vagrant installed with the source code cloned in `path/to/your/cloned/artfactum` we can start up the Vagrant instance.
 
@@ -39,10 +39,11 @@ Follow the following steps to run artfactum locally:
     Since this is probably the first time you're running this command it's going to take a while to download the VM box.
 
 ###Install the required gems
-Once the the Vagrant up is finished
+When the Vagrant up is finished
       Vagrant ssh
       cd /vagrant/
       bundle install
+
 
 ###Setup Environment
       cp database.example.yml database.yml
