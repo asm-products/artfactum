@@ -18,3 +18,11 @@ vendor/bundle
 
 # Ignore uploads
 /public/uploads
+
+# Ignore Vagrant & cookbooks
+/.vagrant
+/cookbooks
+Cheffile.lock
+
+#Ides
+/.idea
