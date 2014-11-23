@@ -8,8 +8,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render 'navbar' if user_signed_in? %>
-<%= render 'homebar' unless user_signed_in? %>
+<%= render 'navbar' %>
 <%= render 'flashes' %>
 <%= yield %>
 <%= render 'footer' %>
