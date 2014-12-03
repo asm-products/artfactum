@@ -20,7 +20,6 @@ Grab the Vagrant installer from **[here](http://www.vagrantup.com/downloads.html
 
 Follow the [installation instructions](https://docs.vagrantup.com/v2/installation/) for your platform on the Vagrant download page.
 
-When the installation
 If you're on a OS X/Linux system you can install the plugins by running:
 
         vagrant plugin install vagrant-vbguest
@@ -54,6 +53,12 @@ When the Vagrant up is finished
 
 ###Run the app
       bundle exec guard
+
+###Next ?
+
+Next time you want to run the server, run : 
+
+      Vagrant up
 
 ## Contributing
 This project's git flow is based on [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
