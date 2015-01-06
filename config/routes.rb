@@ -15,4 +15,10 @@ Rails.application.routes.draw do
     end
     resources :galleries
   end
+
+  namespace :api do
+    resources :users
+    resources :artworks
+    resources :galleries
+  end
 end
