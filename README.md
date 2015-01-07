@@ -10,6 +10,8 @@ Artfactum is an online marketplace where artists and art lovers create virtual g
 
 This is a product being built by the Assembly community. You can help push this idea forward by visiting https://assembly.com/artfactum.
 
+##API
+The RESTful JSON API in this Rails repo serves data to the [frontend](https://github.com/asm-products/artfactum-frontend).  The API controllers can be found in the `app/controllers/api` directory.  To authenticate with the API for non-public calls (like updating a user's settings), simply send the email and authentication token in the request headers.  The headers should be in the form `X-Artfactum-Email` and `X-Artfactum-Token` respectively.  A simple API call might be something like `$ curl http://localhost:3000/api/galleries` to list all galleries.
 
 ##Built With
 
