@@ -21,4 +21,10 @@ Rails.application.routes.draw do
     get 'c/:category_id', to: 'categories#show', as: 'categories'
     get 'c/:category_id/:sub_category_id', to: 'categories#show', as: 'sub_categories'
   end
+
+  namespace :api do
+    resources :users
+    resources :artworks
+    resources :galleries
+  end
 end

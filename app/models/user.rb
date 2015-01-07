@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   has_many :galleries
   has_many :attachments, through: :artworks
 
+  acts_as_token_authenticatable
+
   def self.create_from_omniauth(params)
     attributes = {
       email: params[:info][:email] || '',

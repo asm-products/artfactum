@@ -11,5 +11,8 @@ module Artfactum
     config.i18n.enforce_available_locales = true
     config.active_record.default_timezone = :utc
     config.action_controller.action_on_unpermitted_parameters = :raise
+
+    # Custom directories with classes and modules you want to be autoloadable.
+    config.autoload_paths += %W(#{config.root}/lib)
   end
 end
