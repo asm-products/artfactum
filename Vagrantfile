@@ -2,11 +2,10 @@
 # vi: set ft=ruby :
 
 VAGRANTFILE_API_VERSION = "2"
- 
+
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Use Ubuntu 14.04 Trusty Tahr 64-bit as our operating system
   config.vm.box = "ubuntu/trusty64"
- 
 
   config.ssh.keep_alive = true
   config.ssh.forward_agent = true
@@ -26,10 +25,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   else
     puts "Please install the 'vagrant-vbguest' plugin"
   end
-  # Use Chef Solo to provision our virtual machine
-    config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = ["cookbooks", "cookbooks"]
 
+  # Use Chef Solo to provision our virtual machine
+  config.vm.provision :chef_solo do |chef|
     chef.add_recipe "apt"
     chef.add_recipe "nodejs"
     chef.add_recipe "build-essential"
