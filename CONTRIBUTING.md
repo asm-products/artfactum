@@ -48,6 +48,7 @@ When the Vagrant up is finished
       cp database.example.yml database.yml
       cp .example.env .env
 
+If you need help setting up the Environment take a look at [this](%28https://github.com/asm-products/artfactum/blob/master/Setting_env.md)
 ###Set up the database
       rake db:setup
 
