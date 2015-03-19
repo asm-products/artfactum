@@ -1,0 +1,15 @@
+<script>
+<% if params[:init] == "true" %>
+  analytics.alias('<%= current_user.id %>');
+  analytics.track('Signed Up', {
+    userLogin: '<%= current_user.email %>',
+    type: 'organic',
+    accountId: '<%= current_user.account.id %>'
+  });
+  analytics.identfy('<%= current_user.account.id %>'{
+    name: '<%= current_user.name %>',
+    email: '<%= current_user.email %>'
+  });
+  
+<% end %>
+</script>
