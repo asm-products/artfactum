@@ -23,6 +23,14 @@
 				</div>
 
 				<%= @artwork.description %>
+
+        <div class="page-header">
+          <h4>Tags</h4>
+        </div>
+
+        <% @artwork.tags.each do |tag| %>
+        <%= link_to "#{tag.name}", artwork_path(@artwork), class: 'label label-default' %>
+        <% end %>
 			</div>
 		</div>
 	</div>
