@@ -1,6 +1,5 @@
-User::Provider.create(name: 'facebook')
-User::Provider.create(name: 'twitter')
-User::Provider.create(name: 'google_oauth2')
+User.create(username: 'artfactum', email: 'artfactum@example.com',
+  password: 'artfactum', password_confirmation: 'artfactum', admin: true)
 
 Category.create(name: 'Applied Art', slug: 'applied')
 Category.create(name: 'Digital Art', slug: 'digital')
